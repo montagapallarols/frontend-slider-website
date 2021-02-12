@@ -27,13 +27,33 @@
   left: 1.8%;
 }
 
-@mixin middleLeftTitle {
+@mixin leftTitle {
   font-size: 2.5em;
   position: absolute;
   text-transform: uppercase;
   top: 50%;
   margin-top: -53px;
   left: 5%;
+}
+
+@mixin rightTitle {
+  text-align: right;
+  font-size: 2.5em;
+  position: absolute;
+  text-transform: uppercase;
+  top: 50%;
+  margin-top: -53px;
+  right: 5%;
+}
+
+@mixin rightTopTitle {
+  text-align: right;
+  font-size: 2.5em;
+  position: absolute;
+  text-transform: uppercase;
+  top: 50%;
+  margin-top: -103px;
+  right: 5%;
 }
 
 @mixin fadeOutText {

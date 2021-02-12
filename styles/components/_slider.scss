@@ -59,7 +59,11 @@
     @include fadeOutText();
   }
 
-  .fade-in-text {
+  // .fade-in-text {
+  //   @include fadeInText();
+  // }
+
+  .current {
     @include fadeInText();
   }
 
@@ -78,18 +82,30 @@
     }
   }
 
-  .content-slide1 {
+  .left {
+    opacity: 0;
     h2 {
-      @include middleLeftTitle;
+      @include leftTitle;
       span {
         border-bottom: $titleUnderline;
       }
     }
   }
 
-  .content-slide2 {
+  .right {
+    opacity: 0;
     h2 {
-      @include middleLeftTitle;
+      @include rightTitle;
+      span {
+        border-bottom: $titleUnderline;
+      }
+    }
+  }
+
+  .right-top {
+    opacity: 0;
+    h2 {
+      @include rightTopTitle;
       span {
         border-bottom: $titleUnderline;
       }
