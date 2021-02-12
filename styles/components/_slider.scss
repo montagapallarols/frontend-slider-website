@@ -59,10 +59,6 @@
     @include fadeOutText();
   }
 
-  // .fade-in-text {
-  //   @include fadeInText();
-  // }
-
   .current {
     @include fadeInText();
   }
