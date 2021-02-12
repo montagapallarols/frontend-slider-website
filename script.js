@@ -5,6 +5,7 @@ const sliderContainer = document.querySelector(".slider-container");
 
 setTimeout(function showIntro(){
     intro.style.display = "none";
+    arrowLeft.style.display = "none";
     sliderContainer.style.display = "block";
 }, 1000); 
 
@@ -36,12 +37,15 @@ function moveRight() {
         image.style.transform = `translateX(-${slideDistances[1]}px)`
         page1.classList.remove("fade-in-text")
         page1.classList.add("fade-out-text")
+        page2.classList.add("fade-in-text")
         page2.style.display = "block"
         navs[1].classList.remove("current-page")
         navs[2].classList.add("current-page")
     }
     if (currentSlide === 2) {
         image.style.transform = `translateX(-${slideDistances[2]}px)`
+        page2.classList.remove("fade-in-text")
+        page2.classList.add("fade-out-text")
         navs[2].classList.remove("current-page")
         navs[3].classList.add("current-page")
     }
@@ -108,6 +112,7 @@ function moveLeft() {
 arrowRight.addEventListener("click", () => {
     page0.classList.add("fade-out-text")
     moveRight()
+    arrowLeft.style.display = "block";
     currentSlide++
     console.log(currentSlide)
 })

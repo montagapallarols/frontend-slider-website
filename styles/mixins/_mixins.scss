@@ -50,8 +50,10 @@
 }
 
 @mixin fadeInText {
-  opacity: 1;
-  animation: fadeInText 4s;
+  opacity: 0;
+  animation: fadeInText 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
   @keyframes fadeInText {
     from {
       opacity: 0;

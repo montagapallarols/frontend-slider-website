@@ -162,9 +162,13 @@
 }
 
 .content .fade-in-text {
-  opacity: 1;
-  -webkit-animation: fadeInText 4s;
-          animation: fadeInText 4s;
+  opacity: 0;
+  -webkit-animation: fadeInText 1s;
+          animation: fadeInText 1s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes fadeInText {
