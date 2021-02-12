@@ -1,0 +1,98 @@
+.arrow {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 50%;
+  // transform: translateY(-50%);
+  margin-top: -39px;
+}
+
+#arrow-left {
+  @include arrow();
+  transform: rotate(45deg);
+  left: 7px;
+  margin-left: 25px;
+  &:hover {
+    color: $hoverNav;
+  }
+}
+
+#arrow-right {
+  @include arrow();
+  transform: rotate(-135deg);
+  right: 7px;
+  margin-right: 25px;
+  &:hover {
+    color: $hoverNav;
+  }
+}
+
+.slider-container {
+  overflow: hidden;
+  animation: fadeIn 2s;
+  @keyframes fadeIn {
+    from {
+      filter: brightness(0%);
+    }
+    to {
+      filter: brightness(100%);
+    }
+  }
+
+  .slider {
+    background-color: $sliderBackground;
+    display: flex;
+
+    .slide {
+      height: 100vh;
+      transition: transform 1s ease-in-out;
+      transition-delay: 0.7s;
+    }
+  }
+}
+
+.content {
+  font-family: "Klavika-light", Arial, Helvetica, sans-serif;
+  color: $contentText;
+
+  .fade-out-text {
+    @include fadeOutText();
+  }
+
+  .fade-in-text {
+    @include fadeInText();
+  }
+
+  .content-slide0 {
+    h2 {
+      @include topTitle;
+      span {
+        border-bottom: $titleUnderline;
+      }
+    }
+    p {
+      position: absolute;
+      font-size: 0.65em;
+      top: 85%;
+      left: 1.8%;
+    }
+  }
+
+  .content-slide1 {
+    h2 {
+      @include middleLeftTitle;
+      span {
+        border-bottom: $titleUnderline;
+      }
+    }
+  }
+
+  .content-slide2 {
+    h2 {
+      @include middleLeftTitle;
+      span {
+        border-bottom: $titleUnderline;
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@mixin arrow {
+  cursor: pointer;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  color: #fff;
+}
+
+@mixin backgroundImage {
+  background-size: cover;
+  background-image: url("/assets/images/background.jpg");
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+@mixin topTitle {
+  font-size: 2.5em;
+  position: absolute;
+  text-transform: uppercase;
+  top: 3%;
+  left: 1.8%;
+}
+
+@mixin middleLeftTitle {
+  font-size: 2.5em;
+  position: absolute;
+  text-transform: uppercase;
+  top: 50%;
+  margin-top: -53px;
+  left: 5%;
+}
+
+@mixin fadeOutText {
+  opacity: 0;
+  animation: fadeOut 0.5s;
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+}
+
+@mixin fadeInText {
+  opacity: 1;
+  animation: fadeInText 4s;
+  @keyframes fadeInText {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.footer {
+  color: #fff;
+  .nav {
+    font-family: "Klavika-regular", Arial, Helvetica, sans-serif;
+    position: absolute;
+    bottom: 3%;
+    left: 1.8%;
+    border: dotted 2px white;
+    height: 1px;
+    padding: 0px 1px 21px;
+
+    span {
+      cursor: pointer;
+      margin: 1px;
+      padding: 0 3.5px;
+      border-right: dotted 2px white;
+      text-align: center;
+      letter-spacing: 5px;
+      font-size: 0.8rem;
+    }
+
+    .nav0 {
+      color: transparent;
+    }
+
+    .current-page {
+      background-color: white;
+    }
+
+    .nav9 {
+      border-right: none;
+      color: transparent;
+    }
+  }
+
+  .logo {
+    img {
+      position: absolute;
+      bottom: 0.3%;
+      right: 1.8%;
+    }
+  }
+}
