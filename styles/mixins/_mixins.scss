@@ -24,6 +24,7 @@
 @mixin fadeOutText {
   opacity: 0;
   animation: fadeOut 0.5s;
+  -webkit-animation: fadeOut 0.5s;
   @keyframes fadeOut {
     from {
       opacity: 1;
@@ -37,8 +38,11 @@
 @mixin fadeInText {
   opacity: 0;
   animation: fadeInText 1s;
+  -webkit-animation: fadeInText 1s;
   animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
   animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
   @keyframes fadeInText {
     from {
       opacity: 0;
