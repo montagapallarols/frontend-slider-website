@@ -20,22 +20,32 @@ let slideIndicator = 0
 
 const nav = document.querySelector(".nav")
 const navs = Array.from(nav.children)
+const navText = document.querySelector(".nav-text")
+const navStep = document.getElementById("nav-step")
+
 
 function moveSlides(currentSlide, targetSlide) {
+    const navNum = navs[targetSlide].innerHTML
+    navStep.innerHTML = navNum
+   
+    navText.classList.add("show")
     slides[9].style.display = "none"
     arrowLeft.style.display = "block"
     arrowRight.style.display = "block"
     if (targetSlide === 0) {
         arrowLeft.style.display = "none"
+        navText.classList.remove("show")
     }
     if (targetSlide === 9) {
         arrowRight.style.display = "none"
         slides[9].style.display = "block"
+        navText.classList.remove("show")
     }
     slides[currentSlide].classList.add("fade-out-text")
     image.style.transform = `translateX(-${slideDistances[targetSlide]}px)`
     slides[currentSlide].classList.remove("current")
     slides[targetSlide].classList.add("current")
+
     navs[currentSlide].classList.remove("current-page")
     navs[targetSlide].classList.add("current-page")
 }

@@ -33,13 +33,22 @@
     }
   }
 
-  .nav-description {
-    p {
-      font-family: "Klavika-regular", Arial, Helvetica, sans-serif;
-      position: absolute;
-      bottom: 30%;
-      left: 5%;
-    }
+  .nav-text {
+    opacity: 0;
+    font-family: "Klavika-regular", Arial, Helvetica, sans-serif;
+    letter-spacing: 0.5px;
+    font-size: 0.8em;
+    position: absolute;
+    bottom: 3.5%;
+    left: 24%;
+  }
+
+  .show {
+    @include fadeInText();
+  }
+
+  .fade-out {
+    @include fadeOutText();
   }
 
   .logo {

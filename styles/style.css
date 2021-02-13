@@ -344,11 +344,48 @@
   color: transparent;
 }
 
-.footer .nav-description p {
+.footer .nav-text {
+  opacity: 0;
   font-family: "Klavika-regular", Arial, Helvetica, sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 0.8em;
   position: absolute;
-  bottom: 30%;
-  left: 5%;
+  bottom: 3.5%;
+  left: 24%;
+}
+
+.footer .show {
+  opacity: 0;
+  animation: fadeInText 1s;
+  -webkit-animation: fadeInText 1s;
+  animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.footer .fade-out {
+  opacity: 0;
+  animation: fadeOut 0.5s;
+  -webkit-animation: fadeOut 0.5s;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 .footer .logo img {
@@ -363,12 +400,5 @@
   margin: 0;
   padding: 0;
   max-height: 100vh;
-}
-
-.nav-description p {
-  font-family: "Klavika-regular", Arial, Helvetica, sans-serif;
-  position: absolute;
-  bottom: 30%;
-  left: 5%;
 }
 /*# sourceMappingURL=style.css.map */
