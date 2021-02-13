@@ -139,8 +139,8 @@
 
 .content .fade-out-text {
   opacity: 0;
+  animation: fadeOut 0.5s;
   -webkit-animation: fadeOut 0.5s;
-          animation: fadeOut 0.5s;
 }
 
 @-webkit-keyframes fadeOut {
@@ -163,12 +163,12 @@
 
 .content .current {
   opacity: 0;
+  animation: fadeInText 1s;
   -webkit-animation: fadeInText 1s;
-          animation: fadeInText 1s;
+  animation-delay: 1.5s;
   -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+  animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes fadeInText {
@@ -261,6 +261,52 @@
   border-bottom: 1px solid #fff;
 }
 
+.contact {
+  opacity: 0;
+}
+
+.contact h2 {
+  font-size: 2.5em;
+  position: absolute;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: right;
+  top: 3%;
+  right: 2%;
+  border-bottom: 1px solid #fff;
+}
+
+.contact p {
+  font-size: 0.7em;
+  text-align: right;
+  position: absolute;
+  top: 50%;
+  margin-top: -53px;
+  right: 2%;
+}
+
+.contact p a {
+  color: #fff;
+}
+
+.contact .icons {
+  font-size: 0.7em;
+  text-align: right;
+  position: absolute;
+  top: 60%;
+  margin-top: -53px;
+  right: 1.5%;
+}
+
+.contact .icons a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact .icons span {
+  padding: 0 8px;
+}
+
 .footer {
   color: #fff;
 }
@@ -298,51 +344,17 @@
   color: transparent;
 }
 
+.footer .nav-description p {
+  font-family: "Klavika-regular", Arial, Helvetica, sans-serif;
+  position: absolute;
+  bottom: 30%;
+  left: 5%;
+}
+
 .footer .logo img {
   position: absolute;
   bottom: 0.3%;
   right: 1.8%;
-}
-
-.contact {
-  opacity: 0;
-}
-
-.contact h2 {
-  letter-spacing: 1px;
-  text-align: right;
-  font-size: 2.5em;
-  position: absolute;
-  text-transform: uppercase;
-  top: 3%;
-  right: 2%;
-  border-bottom: 1px solid #fff;
-}
-
-.contact p {
-  font-size: 0.7em;
-  text-align: right;
-  position: absolute;
-  top: 50%;
-  margin-top: -53px;
-  right: 2%;
-}
-
-.contact p a {
-  color: #fff;
-}
-
-.contact .icons {
-  font-size: 0.7em;
-  text-align: right;
-  position: absolute;
-  top: 60%;
-  margin-top: -53px;
-  right: 1.5%;
-}
-
-.contact .icons span {
-  padding: 0 8px;
 }
 
 * {
@@ -351,5 +363,12 @@
   margin: 0;
   padding: 0;
   max-height: 100vh;
+}
+
+.nav-description p {
+  font-family: "Klavika-regular", Arial, Helvetica, sans-serif;
+  position: absolute;
+  bottom: 30%;
+  left: 5%;
 }
 /*# sourceMappingURL=style.css.map */

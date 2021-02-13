@@ -14,55 +14,61 @@ setTimeout(function showIntro() {
 
 const slider = document.querySelector(".slider");
 const image = document.querySelector(".slide");
-// Amount to move for each slide
-const slideDistances = [800, 1330, 2190, 3070, 3900, 4750, 5990, 5990, 6900]
-let currentSlide = 0
-
+// Amount to move slides
+const slideDistances = [0, 800, 1330, 2190, 3070, 3900, 4750, 5990, 5990, 6900]
+let slideIndicator = 0
 
 const nav = document.querySelector(".nav")
 const navs = Array.from(nav.children)
 
-function moveRight() {
-    if (currentSlide === 8) {
+function moveSlides(currentSlide, targetSlide) {
+    slides[9].style.display = "none"
+    arrowLeft.style.display = "block"
+    arrowRight.style.display = "block"
+    if (targetSlide === 0) {
+        arrowLeft.style.display = "none"
+    }
+    if (targetSlide === 9) {
         arrowRight.style.display = "none"
         slides[9].style.display = "block"
     }
-    arrowLeft.style.display = "block";
     slides[currentSlide].classList.add("fade-out-text")
-    image.style.transform = `translateX(-${slideDistances[currentSlide]}px)`
+    image.style.transform = `translateX(-${slideDistances[targetSlide]}px)`
     slides[currentSlide].classList.remove("current")
-    slides[currentSlide + 1].classList.add("current")
+    slides[targetSlide].classList.add("current")
     navs[currentSlide].classList.remove("current-page")
-    navs[currentSlide + 1].classList.add("current-page")
+    navs[targetSlide].classList.add("current-page")
 }
-
-function moveLeft() {
-    slides[9].style.display = "none"
-    if (currentSlide === 1) {
-        image.style.transform = "translateX(0px)"
-        slides[currentSlide].classList.remove("initial")
-        arrowLeft.style.display = "none"
-    }
-    if (currentSlide === 9) {
-        arrowRight.style.display = "block"
-    }
-    image.style.transform = `translateX(-${slideDistances[currentSlide -2]}px)`
-    slides[currentSlide].classList.remove("current")
-    slides[currentSlide -1].classList.add("current")
-    navs[currentSlide].classList.remove("current-page")
-    navs[currentSlide -1].classList.add("current-page")
-}
-
 
 arrowRight.addEventListener("click", () => {
-    moveRight()
-    currentSlide++
+    const current = slideIndicator
+    const next = slideIndicator + 1
+    moveSlides(current, next)
+    slideIndicator++
 })
 
-
 arrowLeft.addEventListener("click", () => {
-    moveLeft()
-    currentSlide--
+    const current = slideIndicator
+    const prev = slideIndicator - 1
+    moveSlides(current, prev)
+    slideIndicator--
+})
+
+nav.addEventListener("click", (e) => {
+    const currentNav = navs[slideIndicator]
+    // Only target span
+    const targetNav = e.target.closest("span")
+    if (!targetNav) return
+
+    currentNav.classList.remove("current-page")
+    targetNav.classList.add("current-page")
+    // Update current slide number to nav that's been clicked on
+    slideIndicator = navs.indexOf(targetNav)
+    
+    const currentNavIndex = navs.indexOf(currentNav)
+    const targetNavIndex = navs.indexOf(targetNav)
+
+    moveSlides(currentNavIndex, targetNavIndex)
 })
 
 

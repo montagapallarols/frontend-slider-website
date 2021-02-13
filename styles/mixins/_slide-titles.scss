@@ -1,24 +1,24 @@
-%title {
+@mixin title {
   font-size: 2.5em;
   position: absolute;
   text-transform: uppercase;
 }
 
 @mixin topTitle {
-  @extend title;
+  @include title();
   top: 3%;
   left: 1.8%;
 }
 
 @mixin leftTitle {
-  @extend title;
+  @include title();
   top: 50%;
   margin-top: -53px;
   left: 5%;
 }
 
 @mixin rightTitle {
-  @extend title;
+  @include title();
   text-align: right;
   top: 50%;
   margin-top: -53px;
@@ -26,7 +26,7 @@
 }
 
 @mixin rightTopTitle {
-  @extend title;
+  @include title();
   text-align: right;
   top: 50%;
   margin-top: -103px;
