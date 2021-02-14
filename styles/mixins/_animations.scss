@@ -1,12 +1,12 @@
 @mixin popout {
-  animation: popout 0.5s ease;
-  -webkit-animation: popout 0.5s ease;
+  animation: popout 0.6s ease;
+  -webkit-animation: popout 0.6s ease;
   @keyframes popout {
     from {
       transform: scale(0);
     }
     to {
-      transform: scale(1);
+      transform: scale(1, 1);
     }
   }
   @-webkit-keyframes popout {
@@ -70,22 +70,6 @@
     to {
       transform: translateX(0);
       opacity: 1;
-    }
-  }
-}
-
-@mixin updown {
-  animation: updown 2s ease;
-  animation-delay: 1s;
-  @keyframes updown {
-    0% {
-      transform: translateY(-10%);
-    }
-    50% {
-      transform: translateY(10%);
-    }
-    100% {
-      transform: translateY(-10%);
     }
   }
 }

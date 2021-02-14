@@ -43,8 +43,8 @@
 
 #intro .monk {
   height: 100px;
-  animation: popout 0.5s ease;
-  -webkit-animation: popout 0.5s ease;
+  animation: popout 0.6s ease;
+  -webkit-animation: popout 0.6s ease;
 }
 
 @keyframes popout {
@@ -53,8 +53,8 @@
             transform: scale(0);
   }
   to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
   }
 }
 
@@ -68,6 +68,7 @@
 }
 
 #intro .intro-text {
+  overflow: hidden;
   padding: 40px 0;
   opacity: 0;
   animation: popoutText 0.2s;
@@ -104,11 +105,7 @@
   }
 }
 
-#intro .intro-text-1 {
-  overflow: hidden;
-}
-
-#intro .intro-text-1 span {
+#intro .intro-text span {
   display: inline-block;
   animation: slideText 1.8s;
   -webkit-animation: slideText 1.8s;
@@ -138,10 +135,6 @@
             transform: translateX(0);
     opacity: 1;
   }
-}
-
-#intro .intro-text-2 {
-  opacity: 1;
 }
 
 .arrow {
@@ -232,6 +225,18 @@
   color: #fff;
 }
 
+@media screen and (max-width: 1000px) {
+  .content {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .content {
+    font-size: 0.7em;
+  }
+}
+
 .content .fade-out-text {
   opacity: 0;
   animation: fadeOut 0.5s;
@@ -303,6 +308,12 @@
   left: 1.8%;
 }
 
+@media screen and (max-width: 1000px) {
+  .content .content-slide0 p {
+    top: 80%;
+  }
+}
+
 .content .left {
   opacity: 0;
 }
@@ -314,6 +325,18 @@
   top: 50%;
   margin-top: -53px;
   left: 5%;
+}
+
+@media screen and (max-width: 1000px) {
+  .content .left h2 {
+    left: 8%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .content .left h2 {
+    left: 16%;
+  }
 }
 
 .content .left h2 span {
@@ -334,6 +357,18 @@
   right: 5%;
 }
 
+@media screen and (max-width: 1000px) {
+  .content .right h2 {
+    right: 8%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .content .right h2 {
+    right: 16%;
+  }
+}
+
 .content .right h2 span {
   border-bottom: 1px solid #fff;
 }
@@ -350,6 +385,18 @@
   top: 50%;
   margin-top: -103px;
   right: 5%;
+}
+
+@media screen and (max-width: 1000px) {
+  .content .right-top h2 {
+    right: 8%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .content .right-top h2 {
+    right: 16%;
+  }
 }
 
 .content .right-top h2 span {
@@ -416,6 +463,12 @@
   padding: 0px 1px 21px;
 }
 
+@media screen and (max-width: 1000px) {
+  .footer .nav {
+    bottom: 6%;
+  }
+}
+
 .footer .nav span {
   cursor: pointer;
   margin: 1px;
@@ -451,6 +504,13 @@
   position: absolute;
   bottom: 3.5%;
   left: 24%;
+}
+
+@media screen and (max-width: 1000px) {
+  .footer .nav-text {
+    bottom: 2%;
+    left: 1.8%;
+  }
 }
 
 .footer .show {

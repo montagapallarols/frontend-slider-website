@@ -55,6 +55,14 @@
   font-family: "Klavika-light", Arial, Helvetica, sans-serif;
   color: $contentText;
 
+  @include tablet {
+    font-size: 0.8em;
+  }
+
+  @include mobile {
+    font-size: 0.7em;
+  }
+
   .fade-out-text {
     @include fadeOutText();
   }
@@ -75,6 +83,10 @@
       font-size: 0.65em;
       top: 85%;
       left: 1.8%;
+
+      @include tablet {
+        top: 80%;
+      }
     }
   }
 

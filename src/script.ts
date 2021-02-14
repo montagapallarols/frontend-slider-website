@@ -16,7 +16,7 @@ setTimeout(function showIntro() {
   arrowLeft.style.display = "none";
   sliderContainer.style.display = "block";
   slides[9].style.display = "none";
-}, 3000);
+}, 1000);
 
 const slider = document.querySelector(".slider") as HTMLDivElement;
 const image = document.querySelector(".slide") as HTMLImageElement;
@@ -30,6 +30,7 @@ const navText = document.querySelector(".nav-text") as HTMLDivElement;
 const navStep = document.getElementById("nav-step") as HTMLSpanElement;
 
 function moveSlides(currentSlide: number, targetSlide: number) {
+  // Change step number on footer dynamically
   const navNum = navs[targetSlide].innerHTML;
   navStep.innerHTML = navNum;
 

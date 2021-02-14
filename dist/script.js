@@ -12,7 +12,7 @@ setTimeout(function showIntro() {
     arrowLeft.style.display = "none";
     sliderContainer.style.display = "block";
     slides[9].style.display = "none";
-}, 3000);
+}, 1000);
 var slider = document.querySelector(".slider");
 var image = document.querySelector(".slide");
 // Amount to move slides in px
@@ -23,6 +23,7 @@ var navs = Array.from(nav.children);
 var navText = document.querySelector(".nav-text");
 var navStep = document.getElementById("nav-step");
 function moveSlides(currentSlide, targetSlide) {
+    // Change step number on footer dynamically
     var navNum = navs[targetSlide].innerHTML;
     navStep.innerHTML = navNum;
     navText.classList.add("show");

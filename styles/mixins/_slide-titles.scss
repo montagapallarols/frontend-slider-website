@@ -15,6 +15,14 @@
   top: 50%;
   margin-top: -53px;
   left: 5%;
+
+  @include tablet {
+    left: 8%;
+  }
+
+  @include mobile {
+    left: 16%;
+  }
 }
 
 @mixin rightTitle {
@@ -23,6 +31,14 @@
   top: 50%;
   margin-top: -53px;
   right: 5%;
+
+  @include tablet {
+    right: 8%;
+  }
+
+  @include mobile {
+    right: 16%;
+  }
 }
 
 @mixin rightTopTitle {
@@ -31,4 +47,12 @@
   top: 50%;
   margin-top: -103px;
   right: 5%;
+
+  @include tablet {
+    right: 8%;
+  }
+
+  @include mobile {
+    right: 16%;
+  }
 }

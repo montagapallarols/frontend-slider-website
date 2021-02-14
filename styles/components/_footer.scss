@@ -9,6 +9,10 @@
     height: 1px;
     padding: 0px 1px 21px;
 
+    @include tablet {
+      bottom: 6%;
+    }
+
     span {
       cursor: pointer;
       margin: 1px;
@@ -44,6 +48,11 @@
     position: absolute;
     bottom: 3.5%;
     left: 24%;
+
+    @include tablet {
+      bottom: 2%;
+      left: 1.8%;
+    }
   }
 
   .show {
