@@ -1,27 +1,31 @@
 const intro = document.getElementById("intro") as HTMLDivElement;
+const monk = document.querySelector(".monk") as HTMLImageElement;
+const monkText = document.querySelector(
+  ".intro-text-1"
+) as HTMLParagraphElement;
 const arrowLeft = document.getElementById("arrow-left") as HTMLDivElement;
 const arrowRight = document.getElementById("arrow-right") as HTMLDivElement;
 const sliderContainer = document.querySelector(
   ".slider-container"
 ) as HTMLDivElement;
 const content = document.querySelector(".content") as HTMLDivElement;
-const slides = Array.from(content.children) as any;
+const slides = Array.from(content.children) as Array<HTMLElement>;
 
 setTimeout(function showIntro() {
   intro.style.display = "none";
   arrowLeft.style.display = "none";
   sliderContainer.style.display = "block";
   slides[9].style.display = "none";
-}, 1000);
+}, 3000);
 
-const slider = document.querySelector(".slider");
+const slider = document.querySelector(".slider") as HTMLDivElement;
 const image = document.querySelector(".slide") as HTMLImageElement;
-// Amount to move slides
+// Amount to move slides in px
 const slideDistances = [0, 800, 1330, 2190, 3070, 3900, 4750, 5990, 5990, 6900];
 let slideIndicator = 0;
 
 const nav = document.querySelector(".nav") as HTMLDivElement;
-const navs = Array.from(nav.children);
+const navs = Array.from(nav.children) as Array<HTMLSpanElement>;
 const navText = document.querySelector(".nav-text") as HTMLDivElement;
 const navStep = document.getElementById("nav-step") as HTMLSpanElement;
 
@@ -65,10 +69,11 @@ arrowLeft.addEventListener("click", () => {
   slideIndicator--;
 });
 
-nav.addEventListener("click", (e: any) => {
+nav.addEventListener("click", (e: Event) => {
   const currentNav = navs[slideIndicator];
+  const target = e.target as HTMLDivElement;
   // Only target span
-  const targetNav = e.target.closest("span");
+  const targetNav = target.closest("span");
   if (!targetNav) return;
 
   currentNav.classList.remove("current-page");

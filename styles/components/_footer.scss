@@ -17,6 +17,9 @@
       text-align: center;
       letter-spacing: 5px;
       font-size: 0.8rem;
+      &:hover {
+        color: $hoverNav;
+      }
     }
 
     .nav0 {

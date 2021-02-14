@@ -1,0 +1,139 @@
+@mixin popout {
+  animation: popout 0.5s ease;
+  -webkit-animation: popout 0.5s ease;
+  @keyframes popout {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  @-webkit-keyframes popout {
+    from {
+      -webkit-transform: scale(0);
+    }
+    to {
+      -webkit-transform: scale(1);
+    }
+  }
+}
+
+@mixin popoutText {
+  opacity: 0;
+  animation: popoutText 0.2s;
+  -webkit-animation: popoutText 0.2s;
+  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  @keyframes popoutText {
+    from {
+      opacity: 0;
+      transform: scale(0);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  @-webkit-keyframes popoutText {
+    from {
+      opacity: 0;
+      transform: scale(0);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+@mixin slideText {
+  animation: slideText 1.8s;
+  -webkit-animation: slideText 1.8s;
+  @keyframes slideText {
+    from {
+      transform: translateX(500px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes slideText {
+    from {
+      transform: translateX(500px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
+
+@mixin updown {
+  animation: updown 2s ease;
+  animation-delay: 1s;
+  @keyframes updown {
+    0% {
+      transform: translateY(-10%);
+    }
+    50% {
+      transform: translateY(10%);
+    }
+    100% {
+      transform: translateY(-10%);
+    }
+  }
+}
+
+@mixin fadeOutText {
+  opacity: 0;
+  animation: fadeOut 0.5s;
+  -webkit-animation: fadeOut 0.5s;
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+}
+
+@mixin fadeInText {
+  opacity: 0;
+  animation: fadeInText 1s;
+  -webkit-animation: fadeInText 1s;
+  animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  @keyframes fadeInText {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes fadeInText {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

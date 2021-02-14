@@ -1,5 +1,7 @@
 "use strict";
 var intro = document.getElementById("intro");
+var monk = document.querySelector(".monk");
+var monkText = document.querySelector(".intro-text-1");
 var arrowLeft = document.getElementById("arrow-left");
 var arrowRight = document.getElementById("arrow-right");
 var sliderContainer = document.querySelector(".slider-container");
@@ -10,10 +12,10 @@ setTimeout(function showIntro() {
     arrowLeft.style.display = "none";
     sliderContainer.style.display = "block";
     slides[9].style.display = "none";
-}, 1000);
+}, 3000);
 var slider = document.querySelector(".slider");
 var image = document.querySelector(".slide");
-// Amount to move slides
+// Amount to move slides in px
 var slideDistances = [0, 800, 1330, 2190, 3070, 3900, 4750, 5990, 5990, 6900];
 var slideIndicator = 0;
 var nav = document.querySelector(".nav");
@@ -57,8 +59,9 @@ arrowLeft.addEventListener("click", function () {
 });
 nav.addEventListener("click", function (e) {
     var currentNav = navs[slideIndicator];
+    var target = e.target;
     // Only target span
-    var targetNav = e.target.closest("span");
+    var targetNav = target.closest("span");
     if (!targetNav)
         return;
     currentNav.classList.remove("current-page");

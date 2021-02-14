@@ -1,38 +1,11 @@
 @import "./slide-titles";
+@import "./animations";
 
 @mixin flexCenter {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-
-@mixin popout {
-  animation: popout 0.8s ease;
-  -webkit-animation: popout 0.8s ease;
-  @keyframes popout {
-    from {
-      transform: scale(0);
-    }
-    80% {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(1);
-    }
-  }
-  // @-webkit-keyframes popout {
-  //   from {
-  //     -webkit-transform: scale(0);
-  //   }
-  //   80% {
-  //     // -webkit-transform: scale(1);
-  //     -webkit-transform: translateY(100%);
-  //   }
-  //   to {
-  //     -webkit-transform: scale(1);
-  //   }
-  // }
 }
 
 @mixin arrow {
@@ -47,52 +20,4 @@
   background-image: url("/assets/images/background.jpg");
   background-repeat: no-repeat;
   height: 100vh;
-}
-
-@mixin fadeOutText {
-  opacity: 0;
-  animation: fadeOut 0.5s;
-  -webkit-animation: fadeOut 0.5s;
-  @keyframes fadeOut {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
-  }
-  @-webkit-keyframes fadeOut {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
-  }
-}
-
-@mixin fadeInText {
-  opacity: 0;
-  animation: fadeInText 1s;
-  -webkit-animation: fadeInText 1s;
-  animation-delay: 1.5s;
-  -webkit-animation-delay: 1.5s;
-  animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
-  @keyframes fadeInText {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes fadeInText {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
 }

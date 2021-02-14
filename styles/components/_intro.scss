@@ -14,7 +14,20 @@
   }
 
   .intro-text {
-    padding: 40px;
-    @include popout();
+    padding: 40px 0;
+    @include popoutText();
+  }
+
+  .intro-text-1 {
+    overflow: hidden;
+
+    span {
+      display: inline-block;
+      @include slideText();
+    }
+  }
+
+  .intro-text-2 {
+    opacity: 1;
   }
 }
