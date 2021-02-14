@@ -23,7 +23,6 @@ const navs = Array.from(nav.children)
 const navText = document.querySelector(".nav-text")
 const navStep = document.getElementById("nav-step")
 
-
 function moveSlides(currentSlide, targetSlide) {
     const navNum = navs[targetSlide].innerHTML
     navStep.innerHTML = navNum

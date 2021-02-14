@@ -7,6 +7,34 @@
   flex-direction: column;
 }
 
+@mixin popout {
+  animation: popout 0.8s ease;
+  -webkit-animation: popout 0.8s ease;
+  @keyframes popout {
+    from {
+      transform: scale(0);
+    }
+    80% {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  // @-webkit-keyframes popout {
+  //   from {
+  //     -webkit-transform: scale(0);
+  //   }
+  //   80% {
+  //     // -webkit-transform: scale(1);
+  //     -webkit-transform: translateY(100%);
+  //   }
+  //   to {
+  //     -webkit-transform: scale(1);
+  //   }
+  // }
+}
+
 @mixin arrow {
   cursor: pointer;
   border-bottom: 2px solid;
@@ -33,6 +61,14 @@
       opacity: 0;
     }
   }
+  @-webkit-keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
 }
 
 @mixin fadeInText {
@@ -44,6 +80,14 @@
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   @keyframes fadeInText {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes fadeInText {
     from {
       opacity: 0;
     }

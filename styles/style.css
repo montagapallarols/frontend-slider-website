@@ -43,10 +43,59 @@
 
 #intro .monk {
   height: 100px;
+  animation: popout 0.8s ease;
+  -webkit-animation: popout 0.8s ease;
+}
+
+@-webkit-keyframes popout {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  80% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes popout {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  80% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 #intro .intro-text {
   padding: 40px;
+  animation: popout 0.8s ease;
+  -webkit-animation: popout 0.8s ease;
+}
+
+@keyframes popout {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  80% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .arrow {
@@ -143,7 +192,7 @@
   -webkit-animation: fadeOut 0.5s;
 }
 
-@-webkit-keyframes fadeOut {
+@keyframes fadeOut {
   from {
     opacity: 1;
   }
@@ -152,7 +201,7 @@
   }
 }
 
-@keyframes fadeOut {
+@-webkit-keyframes fadeOut {
   from {
     opacity: 1;
   }
@@ -171,7 +220,7 @@
   -webkit-animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes fadeInText {
+@keyframes fadeInText {
   from {
     opacity: 0;
   }
@@ -180,7 +229,7 @@
   }
 }
 
-@keyframes fadeInText {
+@-webkit-keyframes fadeInText {
   from {
     opacity: 0;
   }
@@ -373,6 +422,15 @@
   }
 }
 
+@-webkit-keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .footer .fade-out {
   opacity: 0;
   animation: fadeOut 0.5s;
@@ -380,6 +438,15 @@
 }
 
 @keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
   from {
     opacity: 1;
   }

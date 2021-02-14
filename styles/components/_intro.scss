@@ -10,9 +10,11 @@
 
   .monk {
     height: 100px;
+    @include popout();
   }
 
   .intro-text {
     padding: 40px;
+    @include popout();
   }
 }
