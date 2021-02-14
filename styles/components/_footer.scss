@@ -21,9 +21,6 @@
       text-align: center;
       letter-spacing: 5px;
       font-size: 0.8rem;
-      &:hover {
-        color: $hoverNav;
-      }
     }
 
     .nav0 {
@@ -68,6 +65,7 @@
       position: absolute;
       bottom: 0.3%;
       right: 1.8%;
+      height: 60px;
     }
   }
 }

@@ -16,7 +16,7 @@ setTimeout(function showIntro() {
   arrowLeft.style.display = "none";
   sliderContainer.style.display = "block";
   slides[9].style.display = "none";
-}, 1000);
+}, 3000);
 
 const slider = document.querySelector(".slider") as HTMLDivElement;
 const image = document.querySelector(".slide") as HTMLImageElement;

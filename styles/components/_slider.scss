@@ -41,7 +41,6 @@
 
   .slider {
     background-color: $sliderBackground;
-    display: flex;
 
     .slide {
       height: 100vh;
@@ -54,14 +53,6 @@
 .content {
   font-family: "Klavika-light", Arial, Helvetica, sans-serif;
   color: $contentText;
-
-  @include tablet {
-    font-size: 0.8em;
-  }
-
-  @include mobile {
-    font-size: 0.7em;
-  }
 
   .fade-out-text {
     @include fadeOutText();

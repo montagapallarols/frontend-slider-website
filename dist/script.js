@@ -12,7 +12,7 @@ setTimeout(function showIntro() {
     arrowLeft.style.display = "none";
     sliderContainer.style.display = "block";
     slides[9].style.display = "none";
-}, 1000);
+}, 3000);
 var slider = document.querySelector(".slider");
 var image = document.querySelector(".slide");
 // Amount to move slides in px
