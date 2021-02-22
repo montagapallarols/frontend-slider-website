@@ -5,17 +5,17 @@
 
 @font-face {
   font-family: "Klavika-light";
-  src: url(../assets/font/klavika-light-webfont.woff) format("woff2");
+  src: url(../assets/font/klavika-light-webfont.woff) format("woff");
 }
 
 @font-face {
   font-family: "Klavika-medium";
-  src: url(../assets/font/klavika-medium-webfont.woff) format("woff2");
+  src: url(../assets/font/klavika-medium-webfont.woff) format("woff");
 }
 
 @font-face {
   font-family: "Klavika-regular";
-  src: url(../assets/font/klavika-regular-webfont.woff) format("woff2");
+  src: url(../assets/font/klavika-regular-webfont.woff) format("woff");
 }
 
 #intro {
@@ -53,8 +53,8 @@
             transform: scale(0);
   }
   to {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
@@ -282,6 +282,12 @@
   left: 1.8%;
 }
 
+@media screen and (max-width: 550px) {
+  .content .content-slide0 h2 {
+    font-size: 1.8em;
+  }
+}
+
 .content .content-slide0 h2 span {
   border-bottom: 1px solid #fff;
 }
@@ -310,6 +316,12 @@
   top: 50%;
   margin-top: -53px;
   left: 5%;
+}
+
+@media screen and (max-width: 550px) {
+  .content .left h2 {
+    font-size: 1.8em;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -342,6 +354,12 @@
   right: 5%;
 }
 
+@media screen and (max-width: 550px) {
+  .content .right h2 {
+    font-size: 1.8em;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .content .right h2 {
     right: 8%;
@@ -370,6 +388,12 @@
   top: 50%;
   margin-top: -103px;
   right: 5%;
+}
+
+@media screen and (max-width: 550px) {
+  .content .right-top h2 {
+    font-size: 1.8em;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -401,6 +425,12 @@
   top: 3%;
   right: 2%;
   border-bottom: 1px solid #fff;
+}
+
+@media screen and (max-width: 550px) {
+  .contact h2 {
+    font-size: 1.8em;
+  }
 }
 
 .contact p {
