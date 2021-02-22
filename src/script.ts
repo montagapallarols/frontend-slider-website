@@ -29,6 +29,14 @@ const navs = Array.from(nav.children) as Array<HTMLSpanElement>;
 const navText = document.querySelector(".nav-text") as HTMLDivElement;
 const navStep = document.getElementById("nav-step") as HTMLSpanElement;
 
+let media = window.matchMedia("(max-width: 760px)");
+
+if (media.matches) {
+  console.log("yes");
+} else {
+  console.log("no");
+}
+
 function moveSlides(currentSlide: number, targetSlide: number) {
   // Change step number on footer dynamically
   const navNum = navs[targetSlide].innerHTML;

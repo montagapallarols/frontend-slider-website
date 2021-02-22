@@ -583,6 +583,12 @@
   height: 60px;
 }
 
+@media screen and (max-width: 550px) {
+  .footer .logo img {
+    height: 40px;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

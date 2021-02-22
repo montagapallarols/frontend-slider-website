@@ -66,6 +66,9 @@
       bottom: 0.3%;
       right: 1.8%;
       height: 60px;
+      @include mobile {
+        height: 40px;
+      }
     }
   }
 }
