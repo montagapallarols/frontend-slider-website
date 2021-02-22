@@ -22,6 +22,7 @@ const slider = document.querySelector(".slider") as HTMLDivElement;
 const image = document.querySelector(".slide") as HTMLImageElement;
 // Amount to move slides in px
 const slideDistances = [0, 800, 1330, 2190, 3070, 3900, 4750, 5990, 5990, 6900];
+const slideMobile = [0, 1000, 1500, 2300, 3100, 4000, 4900, 6100, 6100, 7200];
 let slideIndicator = 0;
 
 const nav = document.querySelector(".nav") as HTMLDivElement;
@@ -30,12 +31,6 @@ const navText = document.querySelector(".nav-text") as HTMLDivElement;
 const navStep = document.getElementById("nav-step") as HTMLSpanElement;
 
 let media = window.matchMedia("(max-width: 760px)");
-
-if (media.matches) {
-  console.log("yes");
-} else {
-  console.log("no");
-}
 
 function moveSlides(currentSlide: number, targetSlide: number) {
   // Change step number on footer dynamically
@@ -56,7 +51,11 @@ function moveSlides(currentSlide: number, targetSlide: number) {
     navText.classList.remove("show");
   }
   slides[currentSlide].classList.add("fade-out-text");
-  image.style.transform = `translateX(-${slideDistances[targetSlide]}px)`;
+  if (media.matches) {
+    image.style.transform = `translateX(-${slideMobile[targetSlide]}px)`;
+  } else {
+    image.style.transform = `translateX(-${slideDistances[targetSlide]}px)`;
+  }
   slides[currentSlide].classList.remove("current");
   slides[targetSlide].classList.add("current");
 

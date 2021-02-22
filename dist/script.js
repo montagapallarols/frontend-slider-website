@@ -17,11 +17,13 @@ var slider = document.querySelector(".slider");
 var image = document.querySelector(".slide");
 // Amount to move slides in px
 var slideDistances = [0, 800, 1330, 2190, 3070, 3900, 4750, 5990, 5990, 6900];
+var slideMobile = [0, 1000, 1500, 2300, 3100, 4000, 4900, 6100, 6100, 7200];
 var slideIndicator = 0;
 var nav = document.querySelector(".nav");
 var navs = Array.from(nav.children);
 var navText = document.querySelector(".nav-text");
 var navStep = document.getElementById("nav-step");
+var media = window.matchMedia("(max-width: 760px)");
 function moveSlides(currentSlide, targetSlide) {
     // Change step number on footer dynamically
     var navNum = navs[targetSlide].innerHTML;
@@ -40,7 +42,12 @@ function moveSlides(currentSlide, targetSlide) {
         navText.classList.remove("show");
     }
     slides[currentSlide].classList.add("fade-out-text");
-    image.style.transform = "translateX(-" + slideDistances[targetSlide] + "px)";
+    if (media.matches) {
+        image.style.transform = "translateX(-" + slideMobile[targetSlide] + "px)";
+    }
+    else {
+        image.style.transform = "translateX(-" + slideDistances[targetSlide] + "px)";
+    }
     slides[currentSlide].classList.remove("current");
     slides[targetSlide].classList.add("current");
     navs[currentSlide].classList.remove("current-page");
