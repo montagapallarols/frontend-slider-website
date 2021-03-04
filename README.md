@@ -1,6 +1,6 @@
 # frontend-slider-website
 
-A slider website that I built from scratch with HTML, Scss, JavaScript and TypeScript. 
+A slider website that I built from scratch with HTML, CSS/Sass, JavaScript and TypeScript. 
 
 <img width="1273" alt="Screen Shot 2021-03-04 at 15 21 26" src="https://user-images.githubusercontent.com/64054997/109977690-5f289f80-7cfd-11eb-9421-ee19cee210e6.png">
 
